@@ -2,7 +2,6 @@ function App() {
     const { Container, Row, Col } = ReactBootstrap;
     return (
         <Container>
-            <h1>Todo App</h1>
             <Row>
                 <Col md={{ offset: 3, span: 6 }}>
                     <TodoListCard />
@@ -91,6 +90,8 @@ function AddItemForm({ onNewItem }) {
     };
 
     return (
+        <div>
+        <h1>Todo App</h1>
         <Form onSubmit={submitNewItem}>
             <InputGroup className="mb-3">
                 <Form.Control
@@ -112,6 +113,7 @@ function AddItemForm({ onNewItem }) {
                 </InputGroup.Append>
             </InputGroup>
         </Form>
+        </div>
     );
 }
 
